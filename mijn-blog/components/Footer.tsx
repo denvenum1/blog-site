@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 export default function Footer() {
     return(
@@ -80,11 +79,19 @@ export default function Footer() {
              </li></ul>
      </div>
      <div className="row">
-         <p className="footer-text col-md-12 col-sm-12 mbr-fonts-style mbr-text display-7"><a href="#" className="text-primary"> PortfolioM4</a>. Powered by <a href="https://mobirise.com" class="text-primary">Mobirise.com</a>
+         <p className="footer-text col-md-12 col-sm-12 mbr-fonts-style mbr-text display-7"><a href="#" className="text-primary"> PortfolioM4</a>. Powered by <a href="https://mobirise.com" className="text-primary">Mobirise.com</a>
          </p>
      </div>
 </div>
-
+<div>
+      <h1>My Socials</h1>
+      <a href="https://github.com" target="_blank">
+        <FaGithub size={30} color="blue"/>
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <FaLinkedin size={30} color="blue"/>
+      </a>
+    </div>
 </section>
             </footer>
         </>
