@@ -11,7 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        
+        primary: "rgb(0, 255, 236)",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"]
