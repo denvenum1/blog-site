@@ -32,11 +32,6 @@
   font-style: normal;
 }
 
-html {
-  margin: 0 auto;
-  max-width: 80%;
-}
-
 body {
   @apply text-[var(--foreground)] bg-[var(--background)] font-['Poppins',_sans-serif];
 }
@@ -95,5 +90,15 @@ body {
   }
   .social-icon {
     @apply flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-300 transition-all duration-300 hover:bg-sky-500;
+  }
+  .section_container {
+    @apply px-6 py-10 mx-auto;
+  }
+  .card_grid {
+    @apply grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-3 ;
+  }
+  .blog-card {
+    @apply bg-white border-[5px] border-primary px-5 rounded-[22px] shadow-blog 
+      hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
   }
 }
