@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import { formatDate } from "@/app/lib/utils";
 import { client } from "@/sanity/lib/client";
 import { POST_BY_ID_QUERY } from "@/sanity/lib/queries";
 import { notFound } from "next/navigation";
 import markdownit from "markdown-it";
+import Image from "next/image"
 
 export default async function BlogPost({ params }: { params: Promise<{ _id: string }> }) {
   const _id = (await params)._id
@@ -18,14 +20,15 @@ export default async function BlogPost({ params }: { params: Promise<{ _id: stri
         <h1 className="text-4xl font-extrabold text-sky-800 mt-2">{post.title}</h1>
         <p className="text-lg text-sky-700 mt-1">{post.category}</p>
       </section>
-
       <section className="mt-8">
-        <div className="mb-6">
-          <img
+        <div className="mb-6 flex justify-center">
+          <Image
             src={post.image}
             alt={post.title}
-            className="w-full h-[600]
- rounded-xl shadow-[0px_15px_20px_-10px_rgba(56,189,248,0.4)]"
+            width={400}
+            height={800}
+            className="rounded-xl shadow-lg scale-105"
+            unoptimized={true}
           />
         </div>
 
