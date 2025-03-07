@@ -1,13 +1,13 @@
 import Banner from "@/components/Banner";
 import PostCard from "@/components/PostCard";
-import { client } from "@/sanity/lib/client";
 import { POST_QUERY } from "@/sanity/lib/queries";
 import { PostType } from "@/components/PostCard"
 import Link from "next/link";
+import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 
 export default async function Home() {
 
-  const posts = await client.fetch(POST_QUERY)
+  const { data: posts } = await sanityFetch({query: POST_QUERY})
   return (
     <>
       <Banner />
@@ -22,7 +22,7 @@ export default async function Home() {
         </h2>
         <ul className="mt-7 card_grid">
           {posts?.length > 0 ? (
-            posts.map((post: PostType) => (
+            posts.slice(0, 4).map((post: PostType) => (
               <PostCard key={post?._id} post={post} />
             ))
           ) : (
@@ -30,6 +30,7 @@ export default async function Home() {
           )}
         </ul>
       </section>
+      <SanityLive/>
     </>
   );
 }

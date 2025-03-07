@@ -10,7 +10,7 @@ export default function PostCard({ post }: { post: PostType }) {
     const { _createdAt, _id, title, description, image, category } = post;
     return (
         <li className="blog-card">
-            <Link href={`/blog/${_id}`}>
+            <Link href={`/blogs/${_id}`}>
                 <Card className="py-4">
                     <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                         <p className="text-tiny uppercase font-bold">{formatDate(_createdAt)}</p>

@@ -1,10 +1,10 @@
 import PostCard, { PostType } from "@/components/PostCard";
-import { client } from "@/sanity/lib/client";
+import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 import { POST_QUERY } from "@/sanity/lib/queries";
 
-const posts = await client.fetch(POST_QUERY)
-
-export default function Blog() {
+export default async function Blogs() {
+  const { data: posts } = await sanityFetch({query: POST_QUERY})
+  
   return (
     <ul className="mt-7 card_grid">
       {posts?.length > 0 ? (
@@ -14,6 +14,7 @@ export default function Blog() {
       ) : (
         <p className="no-results">No blogs found</p>
       )}
+      <SanityLive/>
     </ul>
   );
 }
