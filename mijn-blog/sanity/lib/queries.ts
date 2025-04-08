@@ -1,22 +1,30 @@
 import { defineQuery } from "next-sanity";
 
-export const POST_QUERY =
-defineQuery(`*[_type == "post" && defined(slug.current)] | order(_createdAt desc){
+export const POST_QUERY = defineQuery(`*[_type == "post"] | order(_createdAt desc){
+  _id,
+  title,
   description,
-  title, 
-  image, 
+  category,
   pitch,
-  category, 
-  _id, slug, 
-  _createdAt
-}`)
+  image {
+    asset->{
+      url
+    }
+  },
+    date,
+}`);
 
 export const POST_BY_ID_QUERY = `*[_type == "post" && _id == $_id][0] {
   _id,
   title, 
-  image, 
+  image {
+    asset->{
+      url
+    }
+  }, 
+  description,
   pitch,
   category, 
-  _id, slug, 
-  _createdAt
+  _id,
+  date,
 }`;

@@ -1,4 +1,4 @@
-import PostCard, { PostType } from "@/components/PostCard";
+import PostCard from "@/components/PostCard";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 import { POST_QUERY } from "@/sanity/lib/queries";
 
@@ -8,7 +8,7 @@ export default async function Blogs() {
   return (
     <ul className="mt-7 card_grid">
       {posts?.length > 0 ? (
-        posts.map((post: PostType) => (
+        posts.map((post:any) => (
           <PostCard key={post?._id} post={post} />
         ))
       ) : (

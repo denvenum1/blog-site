@@ -12,26 +12,15 @@ export default async function BlogPost({ params }: { params: Promise<{ _id: stri
   const md = markdownit();
 
   if (!post) return notFound();
-  const parsedContent = md.render(post.pitch || "");
+  const parsedContent = md.render(post.description || "");
   return <>
     <main className="max-w-7xl mx-auto p-8 bg-white rounded-lg shadow-lg">
       <section className="bg-sky-100 rounded-lg p-6 shadow-md">
-        <p className="text-sm text-sky-600 font-medium">{formatDate(post._createdAt)}</p>
+        <p className="text-sm text-sky-600 font-medium">{formatDate(post.date)}</p>
         <h1 className="text-4xl font-extrabold text-sky-800 mt-2">{post.title}</h1>
         <p className="text-lg text-sky-700 mt-1">{post.category}</p>
       </section>
       <section className="mt-8">
-        <div className="mb-6 flex justify-center">
-          <Image
-            src={post.image}
-            alt={post.title}
-            width={400}
-            height={800}
-            className="rounded-xl shadow-lg scale-105"
-            unoptimized={true}
-          />
-        </div>
-
         {parsedContent ? (
           <article
             className="prose max-w-4xl font-serif text-lg text-gray-800 leading-relaxed"
@@ -41,6 +30,16 @@ export default async function BlogPost({ params }: { params: Promise<{ _id: stri
           <p className="text-gray-600 italic">No details provided</p>
         )}
 
+        <section className="relative h-96 w-full rounded-xl overflow-hidden shadow-md mt-8 mb-10">
+          <Image
+            src={post.image.asset.url}
+            alt={post.title}
+            fill
+            className="object-cover"
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </section>
         <hr className="my-6 border-sky-500 p-1 shadow-[0px_10px_15px_-10px_rgba(56,189,248,0.5)]" />
       </section>
     </main>

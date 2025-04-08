@@ -8,7 +8,7 @@ export default function Banner() {
                 <div className='banner_content'>
                     <h2 className='line_bottom'>Ali Ayoub Soujaa</h2>
                     <h3 className='banner_h3'>Backend developer</h3>
-                    <p className='banner_p'>Hey, ik ben Ali, student in het tweede jaar graduaat Programmeren.
+                    <p className='banner_p'>Hey! Ik ben Ali, student in het tweede jaar graduaat Programmeren.
                         Tijdens mijn stage werk ik aan een reportingtool en capaciteitsplanning met NestJS en TypeScript.
                         Op deze blog deel ik mijn traject, wat ik leer en bouw onderweg.
                     </p>
