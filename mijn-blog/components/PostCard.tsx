@@ -1,17 +1,9 @@
 import { formatDate } from "@/app/lib/utils";
-import { Post } from "@/sanity/types";
+import { Post } from "../types/post";
 import Link from "next/link";
 import Image from "next/image";
 
-type PostWithImageUrl = Post & {
-  image?: {
-    asset?: {
-      url?: string;
-    };
-  };
-};
-
-export default function PostCard({ post }: { post: PostWithImageUrl }) {
+export default function PostCard({ post }: { post: Post }) {
   const { date, _id, title, pitch, image, category } = post;
 
   return (
