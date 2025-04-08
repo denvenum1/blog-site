@@ -3,6 +3,7 @@ import PostCard from "@/components/PostCard";
 import { POST_QUERY } from "@/sanity/lib/queries";
 import Link from "next/link";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
+import { Post } from "../types/post";
 
 export default async function Home() {
 
@@ -62,7 +63,7 @@ export default async function Home() {
         </h2>
         <ul className="mt-7 card_grid">
           {posts?.length > 0 ? (
-            posts.slice(0, 3).map((post: any) => (
+            posts.slice(0, 3).map((post: Post) => (
               <PostCard key={post?._id} post={post}/>
             ))
           ) : (
