@@ -58,7 +58,7 @@ body {
     @apply flex justify-between items-end mb-10 border-b border-sky-500 pb-6 shadow-[0px_15px_10px_-15px_rgba(59,130,246,0.5)];
   }
   .nav_list {
-    @apply flex flex-nowrap pt-7 w-[18rem] justify-between;
+    @apply flex flex-nowrap pt-7 w-[28rem] justify-between;
   }
   .nav_link {
     @apply font-bold text-sm uppercase no-underline text-sky-500 pb-5 relative opacity-75 h-4;
