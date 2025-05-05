@@ -14,7 +14,7 @@ export default {
   		screens: {
   			xxl: '1350px',
   			xxxl: '2000px',
-			xl: '1628px',
+			xl: '1000px',
   		},
   		boxShadow: {
   			'200': '0px 10px 30px rgba(59,130,246,0.5)',
