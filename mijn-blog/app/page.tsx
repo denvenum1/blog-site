@@ -32,7 +32,7 @@ export default async function Home() {
           </p>
         </div>
 
-        <div className="xl:w-1/2 flex justify-center items-center pt-10 xl:pt-0">
+        <div className="xl:w-1/2 flex justify-center items-center mb-10">
           <img
             src="IcappsBureau.jpg"
             alt="stage bureau"
@@ -42,11 +42,11 @@ export default async function Home() {
       </section>
 
       <section className="flex flex-col xl:flex-row items-center gap-6 my-12 mt-20 line_bottom pb-20">
-        <div className="xl:w-1/2 flex justify-center">
+        <div className="xl:w-1/2 flex justify-center mb-10">
           <img
             src="MaartenAnckaert.png"
             alt="Foto van mijn mentor"
-            className="w-96 object-cover rounded-full shadow-md"
+            className="object-cover rounded-full shadow-md"
           />
         </div>
 
