@@ -1,21 +1,15 @@
-import PostCard from "@/components/PostCard";
+// app/blogs/page.tsx (Server Component)
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 import { POST_QUERY } from "@/sanity/lib/queries";
-import { Post } from "@/types/post";
+import BlogsClient from "./BlogsClient";
 
-export default async function Blogs() {
-  const { data: posts } = await sanityFetch({query: POST_QUERY})
-  
+export default async function BlogsPage() {
+  const { data: posts } = await sanityFetch({ query: POST_QUERY });
+
   return (
-    <ul className="mt-7 card_grid">
-      {posts?.length > 0 ? (
-        posts.map((post:Post) => (
-          <PostCard key={post?._id} post={post} />
-        ))
-      ) : (
-        <p className="no-results">No blogs found</p>
-      )}
-      <SanityLive/>
-    </ul>
+    <div className="flex gap-6 mt-7">
+      <BlogsClient posts={posts} />
+      <SanityLive />
+    </div>
   );
 }
