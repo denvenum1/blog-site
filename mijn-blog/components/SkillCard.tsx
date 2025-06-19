@@ -58,7 +58,7 @@ const skillData = [
 
 export default function SkillSection() {
   return (
-    <section className="section_container line_bottom pb-20">
+    <section className="section_container pb-20">
       <h2 className="text-2xl font-bold mb-6">Mijn skills</h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {skillData.map(({ title, skills }) => (

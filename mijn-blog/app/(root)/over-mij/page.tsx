@@ -13,8 +13,10 @@ export default function OverMij() {
         />
         <h1 className="text-4xl font-bold">Over mij</h1>
         <p className="mt-2 max-w-xl text-gray-600">
-          Ik ben Ali Soujaa, een rustige en gefocuste developer die graag leert
-          door te doen — zoals nu tijdens mijn stage bij icapps.
+          Ik ben een gedreven en leergierige ontwikkelaar die altijd streeft
+          naar groei, zowel op technisch als persoonlijk vlak. Door mijn stage
+          heb ik niet alleen mijn programmeervaardigheden versterkt, maar ook
+          geleerd om vlotter samen te werken binnen een teamomgeving.
         </p>
         <a href="/Ali_Ayoub_Soujaa_CV.pdf" className="m-4" target="_blank">
           <Button>Bekijk CV</Button>
@@ -23,52 +25,36 @@ export default function OverMij() {
 
       <div className="line_bottom mb-16" />
 
-      {/* Wie ben ik */}
-      <h2 className="text-2xl font-semibold mb-4">Wie ben ik</h2>
       <div className="grid md:grid-cols-2 gap-6 mb-16">
         <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
           <h3 className="text-lg font-semibold mb-2">Opleiding</h3>
           <p>
             <strong>Programming</strong>
             <br />
-            AP Hogeschool, 2023–heden
+            AP Hogeschool, 2023–2025
           </p>
           <p className="text-gray-600 mt-2">
-            Ik volg een professionele bachelor in programmeren, met een focus op
+            Ik volg een graduaat in programmeren, met een focus op
             webontwikkeling en software engineering.
           </p>
         </div>
         <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
-          <h3 className="text-lg font-semibold mb-2">Mijn traject</h3>
+          <h3 className="text-lg font-semibold mb-2">Stage</h3>
           <p className="text-gray-600">
-            Ik werk graag zelfstandig, blijf kalm onder druk, en denk technisch
-            na over mijn oplossingen. Ik probeer eerst zelf tot antwoorden te
-            komen, zoek veel op, en stel gerichte vragen als ik vastzit.
-            Daarnaast werk ik bewust aan mijn communicatie en
-            samenwerkingsvaardigheden.
+            Tijdens mijn stage begon ik als backend developer en werkte ik met
+            technologieën zoals NestJS, TypeScript en PostgreSQL. Ik ontwikkelde
+            API’s, verwerkte data uit externe tools zoals Harvest en Forecast,
+            en leerde gestructureerd werken binnen een team. Daarnaast
+            versterkte ik mijn probleemoplossend denken, zelfstandigheid en
+            technische communicatie.
           </p>
         </div>
       </div>
 
-      <div className="line_bottom mb-16" />
+      <div className="line_bottom" />
 
       {/* Vaardigheden */}
       <SkillSection />
-
-      {/* Stage */}
-      <h2 className="text-2xl font-semibold mb-4">Stage</h2>
-      <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm mb-16">
-        <p>
-          Ik loop stage als backend developer bij <strong>icapps</strong>, in de
-          haven van Antwerpen. Ik werk mee aan digitale toepassingen met{" "}
-          <strong>NestJS</strong> en <strong>TypeScript</strong>.
-        </p>
-        <p className="mt-2 text-gray-600">
-          Wat ik enorm waardeer is de open sfeer. Iedereen is behulpzaam, en dat
-          stimuleert mijn groei als developer.
-        </p>
-      </div>
-
       <div className="line_bottom mb-16" />
 
       {/* Contact */}
